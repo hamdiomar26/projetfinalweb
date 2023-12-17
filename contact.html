@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <script src="https://kit.fontawesome.com/1b55f08193.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="projet.js"></script>
+</head>
+<body>
+<div class="container">
+<nav>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="apropos.html">A propos</a></li>
+    <li><a href="parcours.html">Parcous Académique</a></li>
+    <li><a href="experience.html">Expériences</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact1">
+                <h1 class="subtitle">Contactez Moi</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i> hamdi.omar1@esprit.tn</p>
+                <p><i class="fa-solid fa-phone"></i> +216 50 12 35 56</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/omar.hamdi.188"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com/omar.hamdi.11/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/omar-hamdi-425085292/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                
+            </div>
+            <div class="contact2">
+                <form id="form">
+                    <input type="text" id="nom" name ="Nom" placeholder="Votre Nom" required>
+                    <input type="email" id="email" name ="Email" placeholder="Votre Email" required>
+                    <textarea id="message" name="message" rows="6" placeholder="Votre Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <div id="notification" style="display: none;">
+                    Votre message a été envoyé avec succès! <i class="fa-regular fa-circle-check"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+    const nom = document.getElementById('nom').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (!/^[A-Za-z]+$/.test(nom)) {
+      alert('Please enter a valid nom without numeric characters.');
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    if (!message) {
+      alert('Please enter a message.');
+      return;
+    }
+
+    // Display the notification and delay the form reset and notification removal
+    const notification = document.getElementById('notification');
+    notification.style.display = 'block';
+    setTimeout(() => {
+        notification.style.display = 'none';
+        form.reset(); 
+    }, 3000); // 3000 milliseconds delay
+});
+</script>
+</body>
+</html>

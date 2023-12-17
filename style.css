@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(imagefolder/omar11.png.png);
+    background-size: 70%;
+    background-position: 30% 80%;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px; 
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20%;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+#apropos{
+    padding: 80px 0;
+    color: #ababab;  
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.apropos-col-1{
+    flex-basis: 35%;
+}
+.apropos-col-1 img{
+    width: 335px;
+    border-radius: 15px;
+    margin-left: 130px;
+}
+.apropos-col-2{
+    flex-basis: 55%;
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #ff004f;
+}
+.parc{
+    color: #ff004f;
+}
+.pres{
+    text-align: center;
+    margin: 20px;
+}
+.parcimg{
+    display: block;
+    margin: auto;
+    border-radius: 15px; 
+}
+#exp{
+    padding:30px 0;
+}
+.experience-list{
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minlax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.experience-list div{
+    background: #262626;
+    flex: 1;
+    padding: 20px;
+    padding-left: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 15px;
+    border-radius: 15px;
+    transition: background 0.5s , transform 0.5s;
+}
+.experience-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+.zina{
+    color: #ff004f;
+}
+.experience-list div h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.experience-list div p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+.contact1{
+    flex-basis: 35%;
+}
+.contact2{
+    flex-basis: 60%;
+}
+.contact1 p{
+    margin-top: 30px;
+}
+.contact1 p i{
+   color: #ff004f;
+   margin-right: 15px;
+   font-size: 25px; 
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #ababab;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn{
+    background-color: #ff004f;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 6px;
+    
+}
+.btn:hover{
+    opacity: .6;
+}
+.contact2 form{
+    width: 100%;
+}
+#form input, #form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ff004f;
+    font-size: 18px;
+    border-radius: 6px;
+}
+#form .btn{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#exp .experience-item img {
+    width: 100%;
+    height: auto;
+}
+#notification{
+    position: fixed;
+    color: rgb(2, 138, 2);
+    background: #080808;
+    border-radius: 5px;
+    padding: 1.2em 2.4em;
+    font-family: 'Poppins';
+    
+    transition: all .4s;
+    display: none;
+}
+.show{
+    
+    display: block;
+}
